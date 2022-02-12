@@ -9,11 +9,11 @@ import (
 )
 
 func main() {
-	//_, err := gorm.Open(mysql.Open("root:root@tcp(db:3306)/ambassador"), &gorm.Config{})
+	_, err := gorm.Open(mysql.Open("root:root@tcp(db:3306)/ambassador"), &gorm.Config{})
 
-	dsn := "root:root@tcp(db:3306)/ambassador"
+	/*dsn := "root:root@tcp(db:3306)/ambassador"
 	_, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
-
+	*/
 	if err != nil {
 		panic("Could not connect with the database")
 	}
